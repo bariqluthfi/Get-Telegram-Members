@@ -34,16 +34,16 @@
 
 To use the bot, you’ll need a file of Telegram phone numbers.  
 You can create your `users.txt` file using the following link:
-# Create users.txt
+#### Create users.txt
 👉🏻 https://globalphone.wasmer.app
   
 Save the file in the project root, with one number per line:
 
-```
+`
 +919876543210
 +14155552671
 +447911123456
-```
+`
 
 ⚠️ Important: Only verified Telegram numbers will be kept after running `/verify`.
 
@@ -99,22 +99,22 @@ yarn start
 💻 Bot Commands (CLI)
 
 - 🔍 Verify numbers
-  ```bash
+  `bash
   /verify
-  ```
+  `
   Removes non‑Telegram users from `users.txt` and keeps only valid accounts.
 
 - ➕ Add verified members
-  ```bash
+  `bash
   /add
-  ```
+  `
   Adds verified members to the target group with 10s delay.  
   After 100 members, waits 3 hours before continuing automatically.
 
 - 📊 Check status
-  ```bash
+  `bash
   /status
-  ```
+  `
   Shows current time, number of verified accounts, and lists all commands.
 
 ---
