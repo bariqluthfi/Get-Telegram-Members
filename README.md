@@ -34,12 +34,14 @@
 
 To use the bot, you’ll need a file of Telegram phone numbers.
 
-**Create users.txt (Button):**  
+**Create users.txt:**  
 [![Create users.txt](https://img.shields.io/badge/Create-users.txt-blue?style=for-the-badge)](https://globalphone.wasmer.app)
 
 Save the file in the project root, with one number per line:
 
-+919876543210 +14155552671 +447911123456
+`
++919876543210 +14155552671 +44791112345
+`
 
 ⚠️ Only verified Telegram numbers will be kept after running `/verify`.
 
@@ -49,7 +51,7 @@ Save the file in the project root, with one number per line:
 
 You must generate your own API credentials from Telegram.
 
-**Open Telegram Developer Portal (Button):**  
+**Open Telegram Developer Portal:**  
 [![Telegram Developers](https://img.shields.io/badge/Open-Telegram%20Developers-2CA5E0?style=for-the-badge&logo=telegram)](https://my.telegram.org)
 
 **Steps:**
@@ -69,20 +71,24 @@ These will be requested automatically on first run and saved to `config.json`.
 
 📦 Installation & Setup
 
-**Install packages (Termux):**
-```bash
+1️⃣ Install packages (Termux):
+```copy
 pkg update -y && pkg install git nodejs -y && npm install -g yarn
+```
 
-Clone Repository (Button):
+Clone Repository:
 
 
+```copy
 git clone https://github.com/amanmohdtp/Get-Telegram-Members.git &&
 cd Get-Telegram-Members
+```
 
 Install dependencies:
 
+```copy
 yarn install
-
+```
 
 ---
 
@@ -106,8 +112,9 @@ Saved automatically to config.json.
 
 ▶️ Run the Bot
 
+```copy
 yarn start
-
+```
 
 ---
 
@@ -115,20 +122,26 @@ yarn start
 
 🔍 Verify numbers
 
+`
 /verify
+`
 
 Removes non-Telegram users from users.txt.
 
 ➕ Add verified members
 
+`
 /add
+`
 
 Adds members with 10s delay.
 After 100 users, waits 3 hours automatically.
 
 📊 Check status
 
+`
 /status
+`
 
 Shows current time, verified count, and commands list.
 
@@ -146,7 +159,10 @@ Daily limit of 100 enforced automatically
 Session stays alive 24×7
 
 
-
+---
+<p align="center">
+  <img src="https://media.giphy.com/media/26AHONQ79FdWZhAI0/giphy.gif" width="300" />
+</p>
 ---
 
 🛠 Development Info
