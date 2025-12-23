@@ -1,4 +1,3 @@
-
 <p align="center">
   <img src="https://media.giphy.com/media/3o7TKMt1VVNkHV2PaE/giphy.gif" width="120" />
 </p>
@@ -6,7 +5,7 @@
 <h1 align="center">🚀 GramJS Telegram Member Adder Bot</h1>
 
 <p align="center">
-  <b>A GramJS-based Telegram bot to invite users into groups using Telegram IDs</b><br>
+  <b>A GramJS-based Telegram bot to invite users into groups using phone numbers</b><br>
   Optimized for <b>Termux (Android)</b> & <b>Linux</b> using <b>Yarn</b>
 </p>
 
@@ -21,32 +20,32 @@
 
 ✨ Features
 
-- ✅ Add users to Telegram groups using Telegram IDs  
-- ✅ Smart delay & daily limit protection  
-- ✅ Interactive CLI command system  
-- ✅ Works smoothly on Android (Termux)  
-- ✅ No bot token required (user session based)  
-- ✅ Session saved locally for reuse  
-- ✅ /random command to add a chosen number of random users from a file  
+- ✅ Add users to Telegram groups using phone numbers  
+- ✅ Automatic verification of numbers before adding  
+- ✅ Fixed 10s delay between adds  
+- ✅ Hard‑coded daily limit of 100 members  
+- ✅ Waits 3 hours after limit before continuing  
+- ✅ Runs 24×7 without disconnecting session  
+- ✅ Simple CLI with only three commands  
 
 ---
 
-📥 Getting Your Users List
+📥 Preparing Your Numbers List
 
-To use the /random command or bulk add features, you’ll need a file of Telegram user IDs.  
-You can download or prepare your list from:
+To use the bot, you’ll need a file of Telegram phone numbers.  
+You can create your `users.txt` file using the following link:
+# Create users.txt
+👉🏻 https://globalphone.wasmer.app
+  
+Save the file in the project root, with one number per line:
 
-👉 https://getfiles.unaux.com/
+```
++919876543210
++14155552671
++447911123456
+```
 
-Save the file as users.txt in the project root, with one ID per line:
-
-`
-123456789
-987654321
-112233445
-`
-
-⚠️ Important: Do add users.txt from downloads to your forked repo
+⚠️ Important: Only verified Telegram numbers will be kept after running `/verify`.
 
 ---
 
@@ -71,30 +70,25 @@ cd Get-Telegram-Members
 yarn install
 ```
 
-> ⚡ The bot auto-runs after install thanks to the postinstall script.
-
 ---
 
 🔧 Interactive Config
 
-add credintias on bracket for not to get ban!
 On first run, you’ll be asked for:
 
-- 📱 Telegram number  
+- 📱 Your own Telegram number  
 - 🔑 API ID  
 - 🔑 API Hash  
 - 🎯 Target group link  
-- ⏱️ Delay between adds (10000)  
-- 📊 Daily limit  (50)
 
-These values are saved into config.json automatically.  
+These values are saved into `config.json` automatically.  
 No need to edit files manually.
 
 ---
 
 ▶️ Run the Bot
 
-Start the bot manually (if not auto-run):
+Start the bot manually:
 
 ```bash
 yarn start
@@ -104,47 +98,33 @@ yarn start
 
 💻 Bot Commands (CLI)
 
-- 📥 Load IDs from file
-  `bash
-  /loadfile users.txt
-  `
-- 🗑️ Clear saved IDs
-  `bash
-  /clear
-  `
-- ➕ Add all saved IDs
-  `bash
+- 🔍 Verify numbers
+  ```bash
+  /verify
+  ```
+  Removes non‑Telegram users from `users.txt` and keeps only valid accounts.
+
+- ➕ Add verified members
+  ```bash
   /add
-  `
-- 🎲 Add random users
-  `bash
-  /random 5
-  `
+  ```
+  Adds verified members to the target group with 10s delay.  
+  After 100 members, waits 3 hours before continuing automatically.
+
 - 📊 Check status
-  `bash
+  ```bash
   /status
-  `
-- 🔧 Change daily limit
-  `bash
-  /limit 20
-  `
-- ⏱️ Change delay
-  `bash
-  /delay 15000
-  `
-- ❌ Exit bot
-  `bash
-  /exit
-  `
+  ```
+  Shows current time, number of verified accounts, and lists all commands.
 
 ---
 
 ⚠️ Important Notes
 
-- Only valid Telegram IDs are processed  
+- Only valid Telegram numbers are processed  
 - Users with strict privacy settings may be skipped  
-- Daily limit prevents Telegram rate-limits & bans  
-- Session data is stored locally in config.json  
+- Daily limit of 100 enforced automatically  
+- Bot session stays alive 24×7, even during wait periods  
 
 ---
 
@@ -153,22 +133,10 @@ yarn start
 - 🟢 Built with Node.js  
 - 📦 Powered by GramJS  
 - 🧶 Dependency management via Yarn  
-- 💻 Cross-platform: Linux, macOS, Windows, Android (Termux)  
+- 💻 Cross‑platform: Linux, macOS, Windows, Android (Termux)  
 
 ---
 
 <p align="center">
   <img src="https://media.giphy.com/media/26AHONQ79FdWZhAI0/giphy.gif" width="300" />
 </p>
-
----
-
-⭐ Support
-
-If this project helped you:
-
-- ⭐ Star the repository  
-- 🧑‍💻 Contribute improvements  
-- 🐞 Report issues  
-
----
