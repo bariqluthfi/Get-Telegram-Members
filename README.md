@@ -55,7 +55,7 @@ Save the file as users.txt in the project root, with one ID per line:
 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/gramjs-member-adder.git
+git clone https://github.com/amanmohdtp/gramjs-member-adder.git
 cd gramjs-member-adder
 ```
 
